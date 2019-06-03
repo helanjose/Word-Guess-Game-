@@ -18,8 +18,8 @@ var fruitbasket=['grapes','mango','lemon','apple'];
                     {
                         console.log(inpletter);
                         document.getElementById("presskey").innerHTML="let's play!!!";
-                        document.getElementById("tot").innerHTML=totguesses;
-                        document.getElementById("remaining").innerHTML=remainingguess;
+                        document.getElementById("tot").innerHTML="total guess"+totguesses;
+                        document.getElementById("remaining").innerHTML="remaining guess"+remainingguess;
                         randomfruit(); 
 
                     }
@@ -49,7 +49,7 @@ var fruitbasket=['grapes','mango','lemon','apple'];
             function randomfruit(){
 
                 
-                document.getElementById("loss").innerHTML=0;
+                document.getElementById("loss").innerHTML="loss:"+0;
                       fruit =   fruitbasket[(Math.random() * fruitbasket.length)|0];
 
                       var str =fruit;
@@ -85,7 +85,7 @@ var fruitbasket=['grapes','mango','lemon','apple'];
                                         var inpletter = event.key.toLowerCase();
                                         console.log("insideevent:"+guessitarr);
                                         remainingguess-=1;
-                                        document.getElementById("remaining").innerHTML=remainingguess;
+                                        document.getElementById("remaining").innerHTML="remaining guesses"+remainingguess;
                                         console.log("remaining guess:"+remainingguess);
 
                                         console.log("input"+inpletter);
@@ -136,10 +136,12 @@ var fruitbasket=['grapes','mango','lemon','apple'];
                                                                    
                                                                     sound();
                                                                 
-                                                                   document.getElementById("win").innerHTML=win;
+                                                                   document.getElementById("win").innerHTML="win"+win;
                                                                    console.log("winner");
-                                                                   document.getElementById("presskey").innerHTML="You win!!word is.."+guessitarr;
+                                                                   document.getElementById("presskey").innerHTML="You win!!fruit is.."+guessitarr;
                                                                    if(confirm("word guessed is correct!!Do you want to continue game??")==true){
+
+                                                                    document.getElementById("presskey").innerHTML="Let's continue!!guess the fruit";
 
                                                                    
                                                                    remainingguess=7;

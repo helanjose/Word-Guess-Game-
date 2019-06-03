@@ -1,0 +1,19 @@
+
+
+
+
+#presskey{
+    text-align: center;
+    color: green;
+
+}
+#Guessit{
+    text-align: center;
+    color: red;
+
+}
+#tot,#win,#loss,#remaining{
+    text-align: center;
+    color:blue;
+
+}
